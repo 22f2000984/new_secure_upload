@@ -45,7 +45,7 @@ async def upload_file(
     
     # 3. File size validation (91KB = 93081 bytes)
     content = await file.read()
-    if len(content) > 93000081:
+    if len(content) > 93081:
         raise HTTPException(status_code=413, detail="File too large (max 91KB)")
     
     # 4. Process CSV
